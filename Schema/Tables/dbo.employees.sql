@@ -12,3 +12,7 @@ CREATE TABLE [dbo].[employees]
 GO
 ALTER TABLE [dbo].[employees] ADD CONSTRAINT [PK_employees] PRIMARY KEY CLUSTERED  ([employeeNumber]) ON [PRIMARY]
 GO
+ALTER TABLE [dbo].[employees] ADD CONSTRAINT [FK_employees_employees1] FOREIGN KEY ([reportsTo]) REFERENCES [dbo].[employees] ([employeeNumber])
+GO
+ALTER TABLE [dbo].[employees] ADD CONSTRAINT [FK_employees_offices] FOREIGN KEY ([officeCode]) REFERENCES [dbo].[offices] ([officeCode])
+GO

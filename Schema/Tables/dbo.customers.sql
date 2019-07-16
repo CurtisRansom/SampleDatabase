@@ -17,5 +17,5 @@ CREATE TABLE [dbo].[customers]
 GO
 ALTER TABLE [dbo].[customers] ADD CONSTRAINT [PK_customers] PRIMARY KEY CLUSTERED  ([customerNumber]) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[customers] ADD CONSTRAINT [FK_customers_customers] FOREIGN KEY ([salesRepEmployeeNumber]) REFERENCES [dbo].[customers] ([customerNumber])
+ALTER TABLE [dbo].[customers] ADD CONSTRAINT [FK_customers_customers] FOREIGN KEY ([salesRepEmployeeNumber]) REFERENCES [dbo].[employees] ([employeeNumber])
 GO
