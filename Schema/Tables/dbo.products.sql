@@ -15,3 +15,5 @@ ALTER TABLE [dbo].[products] ADD CONSTRAINT [PK_products] PRIMARY KEY CLUSTERED 
 GO
 ALTER TABLE [dbo].[products] ADD CONSTRAINT [FK_products_productlines] FOREIGN KEY ([productLine]) REFERENCES [dbo].[productlines] ([productLine])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores a list of scale model cars', 'SCHEMA', N'dbo', 'TABLE', N'products', NULL, NULL
+GO

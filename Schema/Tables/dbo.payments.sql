@@ -10,3 +10,5 @@ ALTER TABLE [dbo].[payments] ADD CONSTRAINT [PK_payments] PRIMARY KEY CLUSTERED 
 GO
 ALTER TABLE [dbo].[payments] ADD CONSTRAINT [FK_payments_customers] FOREIGN KEY ([customerNumber]) REFERENCES [dbo].[customers] ([customerNumber])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores payments made by customers based on their accounts', 'SCHEMA', N'dbo', 'TABLE', N'payments', NULL, NULL
+GO

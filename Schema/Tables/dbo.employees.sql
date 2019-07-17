@@ -16,3 +16,5 @@ ALTER TABLE [dbo].[employees] ADD CONSTRAINT [FK_employees_employees1] FOREIGN K
 GO
 ALTER TABLE [dbo].[employees] ADD CONSTRAINT [FK_employees_offices] FOREIGN KEY ([officeCode]) REFERENCES [dbo].[offices] ([officeCode])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores all employee information as well as the organization structure such as who reports to whom', 'SCHEMA', N'dbo', 'TABLE', N'employees', NULL, NULL
+GO

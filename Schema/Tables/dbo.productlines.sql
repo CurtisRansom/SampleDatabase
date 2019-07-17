@@ -8,3 +8,5 @@ CREATE TABLE [dbo].[productlines]
 GO
 ALTER TABLE [dbo].[productlines] ADD CONSTRAINT [PK_productlines] PRIMARY KEY CLUSTERED  ([productLine]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores a list of product line categories', 'SCHEMA', N'dbo', 'TABLE', N'productlines', NULL, NULL
+GO

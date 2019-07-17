@@ -13,3 +13,5 @@ CREATE TABLE [dbo].[offices]
 GO
 ALTER TABLE [dbo].[offices] ADD CONSTRAINT [PK_offices] PRIMARY KEY CLUSTERED  ([officeCode]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores sales office data', 'SCHEMA', N'dbo', 'TABLE', N'offices', NULL, NULL
+GO

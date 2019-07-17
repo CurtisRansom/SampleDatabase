@@ -13,3 +13,5 @@ ALTER TABLE [dbo].[orders] ADD CONSTRAINT [PK_orders] PRIMARY KEY CLUSTERED  ([o
 GO
 ALTER TABLE [dbo].[orders] ADD CONSTRAINT [FK_orders_customers] FOREIGN KEY ([customerNumber]) REFERENCES [dbo].[customers] ([customerNumber])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores sales orders placed by customers', 'SCHEMA', N'dbo', 'TABLE', N'orders', NULL, NULL
+GO

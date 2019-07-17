@@ -19,3 +19,5 @@ ALTER TABLE [dbo].[customers] ADD CONSTRAINT [PK_customers] PRIMARY KEY CLUSTERE
 GO
 ALTER TABLE [dbo].[customers] ADD CONSTRAINT [FK_customers_customers] FOREIGN KEY ([salesRepEmployeeNumber]) REFERENCES [dbo].[employees] ([employeeNumber])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores customer’s data', 'SCHEMA', N'dbo', 'TABLE', N'customers', NULL, NULL
+GO

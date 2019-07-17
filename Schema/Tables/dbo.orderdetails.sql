@@ -13,3 +13,5 @@ ALTER TABLE [dbo].[orderdetails] ADD CONSTRAINT [FK_orderdetails_orderdetails] F
 GO
 ALTER TABLE [dbo].[orderdetails] ADD CONSTRAINT [FK_orderdetails_products] FOREIGN KEY ([productCode]) REFERENCES [dbo].[products] ([productCode])
 GO
+EXEC sp_addextendedproperty N'MS_Description', N'stores sales order line items for each sales order', 'SCHEMA', N'dbo', 'TABLE', N'orderdetails', NULL, NULL
+GO
